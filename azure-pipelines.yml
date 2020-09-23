@@ -1,4 +1,10 @@
 trigger:
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: 'e7bc7ae7-089a-432f-bdf7-c0a6525892c7'
 - '*'
 
 pool:
